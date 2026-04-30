@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class one {
+public class seven {
     public static void main(String[] args) {
 
         Scanner input = new Scanner(System.in);
@@ -13,7 +13,23 @@ public class one {
             arr[i] = input.nextInt();
         }
 
-        System.out.println("The numbers are:");
+        for (int i = 0; i < 5 - 1; i++) {
+
+            for (int j = 0; j < 5 - i - 1; j++) {
+
+                if (arr[j] > arr[j + 1]) {
+
+                    int temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+
+                }
+
+            }
+
+        }
+
+        System.out.println("Array in ascending order:");
 
         for (int i = 0; i < 5; i++) {
             System.out.println(arr[i]);

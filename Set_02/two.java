@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class one {
+public class two {
     public static void main(String[] args) {
 
         Scanner input = new Scanner(System.in);
@@ -13,10 +13,16 @@ public class one {
             arr[i] = input.nextInt();
         }
 
-        System.out.println("The numbers are:");
+        int largest = arr[0];
 
-        for (int i = 0; i < 5; i++) {
-            System.out.println(arr[i]);
+        for (int i = 1; i < 5; i++) {
+
+            if (arr[i] > largest) {
+                largest = arr[i];
+            }
+
         }
+
+        System.out.println("Largest number = " + largest);
     }
 }

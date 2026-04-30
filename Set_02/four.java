@@ -1,22 +1,23 @@
 import java.util.Scanner;
 
-public class one {
+public class four {
     public static void main(String[] args) {
 
         Scanner input = new Scanner(System.in);
 
         int[] arr = new int[5];
 
+        int sum = 0;
+
         System.out.println("Enter 5 numbers:");
 
         for (int i = 0; i < 5; i++) {
             arr[i] = input.nextInt();
+            sum = sum + arr[i];
         }
 
-        System.out.println("The numbers are:");
+        double average = (double) sum / 5;
 
-        for (int i = 0; i < 5; i++) {
-            System.out.println(arr[i]);
-        }
+        System.out.println("Average = " + average);
     }
 }
